@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//imported components
+import Sidebar from "./Components/Sidebar/Sidebar"
+import Topbar from "./Components/Topbar/Topbar"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* larger scrren display content */}
+      <div className='dashboard-container'>
+        <Topbar />
+        <div className='main-components-container'>
+          <Sidebar />
+        </div>
+      </div>
+      {/* small scren display content */}
+      <div className="small-screen-notification">
+        <h1>Can't able to view in small screen. Please, switch to big screen devices.</h1>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App

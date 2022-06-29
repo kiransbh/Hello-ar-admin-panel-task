@@ -1,0 +1,48 @@
+.sidebar-container{
+    // sidebar container size
+    flex: 0.2;
+    width: 20%;
+    height: 92vh;
+    border-right: 1px solid var(--border-color);
+
+    .block-tabs{
+        width: 100%;
+
+        p{
+            // size of the side tab
+            padding: 16px 24px;
+
+            font-size: 18px;
+
+            transition: 0.5s all;
+            cursor: pointer;
+        }
+
+        .active-tab{
+            // active tab of the sidebar tab
+            background-color: var(--brand-color);
+
+            font-family: 'Bold';
+            color: var(--text-higlighting-color);
+        }
+
+        .not-active-tab{
+            // not active state of the sidebar tab
+            background-color: transparent;
+            color: black;
+        }
+    }
+
+    .content-tabs{
+        transition: 0.5s all;
+        
+        // active & not-active state of the content    
+        .active-content{
+            display: block;
+        }
+
+        .not-active-content{
+            display: none;
+        }
+    }
+}

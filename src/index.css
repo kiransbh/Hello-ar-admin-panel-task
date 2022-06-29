@@ -1,13 +1,88 @@
+:root{
+  /* colors */
+  --brand-color: #2ac373;
+  --border-color: rgba(0, 0, 0, 0.25);
+
+  --text-higlighting-color: #fff;
+
+  --model-background-color: #fff;
+  --cancel-button-color: #57ca85;
+  --add-button-color: #feba41;
+}
+
+::-webkit-scrollbar{
+  /* hidden from the user visibility */
+  display: none;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Light', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Light";
+  src: url(Font/ProductSans-Light.ttf);
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url(Font/ProductSans-Bold.ttf);
+}
+
+/* App.js css styles */
+
+.main-components-container{
+  display: flex;
+  flex: 1;
+}
+
+.small-screen-notification{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container{
+    display: none;
+  } 
+
+  .small-screen-notification{
+    display: block;
+
+    /* centering the div for small screens */
+    height: 100vh;
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+    padding: 0 40px;
+  }
+}
+
+/* removing user agent styles */
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Comman styles - button */
+.button{
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-higlighting-color);
+  background-color: var(--brand-color);
+  padding: 0.5em 2em;
+  border-radius: 18px;
+
+  cursor: pointer;
 }
