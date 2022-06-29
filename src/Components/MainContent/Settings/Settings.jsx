@@ -13,7 +13,7 @@ function Settings() {
   const getData = () => {
     const data = localStorage.getItem('value');
     if(data) {
-      // pass the data, if data is their
+      // pass the data, if data is present 
       return JSON.parse(data)
     } else {
       // empty the array
