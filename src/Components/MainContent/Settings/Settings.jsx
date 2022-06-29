@@ -26,7 +26,7 @@ function Settings() {
   const [ role, setRole ] = useState("Owner");
   const [ value, setValues ] = useState(getData());
 
-  // state of model & alert for open and cloe state
+  // state of model & alert for open and close state
   const [ openModel ,setOpenModel ] = useState(false);
   const [ success ,setSuccess ] = useState(false);
   const [ deleted ,setDeleted ] = useState(false);
